@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Pytest
+.pytest_cache/
+.cache/
+
+# Ruff
+.ruff_cache/
+
+# Dados locais
+tasks.json
+
+# Cobertura
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
