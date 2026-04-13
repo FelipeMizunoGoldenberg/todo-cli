@@ -183,10 +183,7 @@ ruff check . --fix
 
 ## 👤 Autor
 
-Desenvolvido como projeto acadêmico para a disciplina de **Engenharia de Software**.
+Desenvolvido por Felipe Mizuno Goldenberg para a disciplina de **BOOTCAMP II**.
 
 ---
 
-## 📄 Licença
-
-Este projeto é de uso acadêmico livre.
