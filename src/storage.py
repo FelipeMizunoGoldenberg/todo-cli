@@ -13,7 +13,7 @@ def load_tasks(filepath: str = DATA_FILE) -> list[dict]:
     """Carrega as tarefas do arquivo JSON. Retorna lista vazia se não existir."""
     if not os.path.exists(filepath):
         return []
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, encoding="utf-8") as f:
         return json.load(f)
 
 
