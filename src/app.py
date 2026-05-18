@@ -11,6 +11,7 @@ Uso:
 import sys
 
 from src.task_manager import add_task, complete_task, list_tasks, remove_task
+from src.weather import get_weather
 
 # Símbolos visuais para status
 STATUS_ICON = {
@@ -81,6 +82,13 @@ def cmd_done(args: list[str]) -> None:
         print(f"Erro: {e}")
         sys.exit(1)
 
+def cmd_weather() -> None:
+    """Comando: mostrar clima atual."""
+    weather = get_weather()
+
+    print("\n🌤️ Clima atual em Brasília")
+    print(f"🌡️ Temperatura: {weather['temperature']}°C")
+    print(f"💨 Vento: {weather['windspeed']} km/h")
 
 def show_help() -> None:
     """Exibe mensagem de ajuda com os comandos disponíveis."""
@@ -96,12 +104,14 @@ Comandos disponíveis:
   remove <id>       Remove uma tarefa pelo ID
   done <id>         Marca uma tarefa como concluída
   help              Exibe esta ajuda
+weather           Mostra o clima atual
 
 Exemplos:
   python app.py add "Estudar matemática"
   python app.py list
   python app.py done 1
   python app.py remove 1
+  python app.py weather
 """)
 
 
@@ -112,6 +122,7 @@ COMMANDS = {
     "remove": lambda args: cmd_remove(args),
     "done": lambda args: cmd_done(args),
     "help": lambda _: show_help(),
+    "weather": lambda _: cmd_weather(),
 }
 
 
